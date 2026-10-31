@@ -18,7 +18,8 @@ jobs:
           
 
       - name: Install dependencies
-        run: npm install
+        run: npm install 
+--legacy-peer-deps
 
       - name: Build and sync Capacitor
         run: npm run cap:build
@@ -36,5 +37,4 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Chispo-debug-APK
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: Chispo-debug-APapp         path: android/app/build/outputs/apk/debug/app-debug.apk
